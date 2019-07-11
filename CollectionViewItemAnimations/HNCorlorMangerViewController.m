@@ -8,12 +8,16 @@
 
 #import "HNCorlorMangerViewController.h"
 #import <IGListKit/IGListKit.h>
+#import "ColorName.h"
+#import "ColorSectionController.h"
 
 @interface HNCorlorMangerViewController ()<IGListAdapterDataSource>
 
 @property (nonatomic) IGListAdapter *colorIGAdapter;
 
 @property (nonatomic) UICollectionView *collectionView;
+
+@property (nonatomic, strong) NSMutableArray * colorArrays;
 
 @end
 
@@ -44,9 +48,24 @@
 }
 
 - (void)configIGListKit {
+    IGListAdapterUpdater *contactUpdater = [[IGListAdapterUpdater alloc] init];
+    _colorIGAdapter = [[IGListAdapter alloc] initWithUpdater:contactUpdater viewController:self workingRangeSize:4];
+    _colorIGAdapter.collectionView = self.collectionView;
+    _colorIGAdapter.dataSource = self;
+    _colorIGAdapter.experiments |= IGListExperimentBackgroundDiffing;
     
 }
 
+#pragma IGListAdapterDataSource
+
+- (NSArray<id<IGListDiffable>> *)objectsForListAdapter:(IGListAdapter *)listAdapter {
+    return self.colorArrays;
+}
+
+- (IGListSectionController *)listAdapter:(IGListAdapter *)listAdapter sectionControllerForObject:(id)object {
+    NSParameterAssert([object isKindOfClass:[ColorName class]]);
+    return [[ColorSectionController alloc] init];
+}
 
 
 @end

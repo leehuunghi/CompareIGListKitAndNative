@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E2DE2BB22D715BC00AD6DD6 /* HNCorlorMangerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DE2BA22D715BC00AD6DD6 /* HNCorlorMangerViewController.m */; };
+		2E2DE2C022D7372300AD6DD6 /* ColorSectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DE2BF22D7372300AD6DD6 /* ColorSectionController.m */; };
 		9ACCF40217CCEC1700F56F10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACCF40117CCEC1700F56F10 /* UIKit.framework */; };
 		9ACCF40417CCEC1700F56F10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACCF40317CCEC1700F56F10 /* Foundation.framework */; };
 		9ACCF40617CCEC1700F56F10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACCF40517CCEC1700F56F10 /* CoreGraphics.framework */; };
@@ -35,6 +36,8 @@
 /* Begin PBXFileReference section */
 		2E2DE2B922D715BC00AD6DD6 /* HNCorlorMangerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HNCorlorMangerViewController.h; sourceTree = "<group>"; };
 		2E2DE2BA22D715BC00AD6DD6 /* HNCorlorMangerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNCorlorMangerViewController.m; sourceTree = "<group>"; };
+		2E2DE2BE22D7372300AD6DD6 /* ColorSectionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorSectionController.h; sourceTree = "<group>"; };
+		2E2DE2BF22D7372300AD6DD6 /* ColorSectionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorSectionController.m; sourceTree = "<group>"; };
 		9ACCF3FE17CCEC1700F56F10 /* CollectionViewItemAnimations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewItemAnimations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACCF40117CCEC1700F56F10 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9ACCF40317CCEC1700F56F10 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -88,22 +91,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2E2DE2B722D7156B00AD6DD6 /* Native */ = {
+		2E2DE2B822D7158100AD6DD6 /* IGListkit */ = {
 			isa = PBXGroup;
 			children = (
-				9ACCF41917CCEC1700F56F10 /* ColorCollectionViewController.h */,
-				9ACCF41A17CCEC1700F56F10 /* ColorCollectionViewController.m */,
+				2E2DE2BD22D736F300AD6DD6 /* SectionController */,
+				2E2DE2BC22D736E900AD6DD6 /* ViewController */,
 			);
-			name = Native;
+			name = IGListkit;
 			sourceTree = "<group>";
 		};
-		2E2DE2B822D7158100AD6DD6 /* IGListkit */ = {
+		2E2DE2BC22D736E900AD6DD6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2E2DE2B922D715BC00AD6DD6 /* HNCorlorMangerViewController.h */,
 				2E2DE2BA22D715BC00AD6DD6 /* HNCorlorMangerViewController.m */,
 			);
-			name = IGListkit;
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2E2DE2BD22D736F300AD6DD6 /* SectionController */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DE2BE22D7372300AD6DD6 /* ColorSectionController.h */,
+				2E2DE2BF22D7372300AD6DD6 /* ColorSectionController.m */,
+			);
+			name = SectionController;
 			sourceTree = "<group>";
 		};
 		7ACE95932F6DBA8A4664C87F /* Pods */ = {
@@ -112,7 +124,6 @@
 				9E6698E164DE978726BB4C8B /* Pods-CollectionViewItemAnimations.debug.xcconfig */,
 				FC559AAE091671567F1A94C6 /* Pods-CollectionViewItemAnimations.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,6 +164,7 @@
 				9ACCF43217CCF20600F56F10 /* Model */,
 				9ACCF42817CCEF0F00F56F10 /* Layout */,
 				9ACCF42717CCEF0500F56F10 /* View Controllers */,
+				2E2DE2B822D7158100AD6DD6 /* IGListkit */,
 				9ACCF41017CCEC1700F56F10 /* AppDelegate.h */,
 				9ACCF41117CCEC1700F56F10 /* AppDelegate.m */,
 				9ACCF40817CCEC1700F56F10 /* Supporting Files */,
@@ -177,8 +189,8 @@
 		9ACCF42717CCEF0500F56F10 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2E2DE2B822D7158100AD6DD6 /* IGListkit */,
-				2E2DE2B722D7156B00AD6DD6 /* Native */,
+				9ACCF41917CCEC1700F56F10 /* ColorCollectionViewController.h */,
+				9ACCF41A17CCEC1700F56F10 /* ColorCollectionViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -344,6 +356,7 @@
 				9ACCF41217CCEC1700F56F10 /* AppDelegate.m in Sources */,
 				9ACCF41B17CCEC1700F56F10 /* ColorCollectionViewController.m in Sources */,
 				9ACCF42C17CCEFF100F56F10 /* LessBoringFlowLayout.m in Sources */,
+				2E2DE2C022D7372300AD6DD6 /* ColorSectionController.m in Sources */,
 				9ACCF43517CCF21A00F56F10 /* ColorName.m in Sources */,
 				9ACCF43817CCF48100F56F10 /* ColorNameCell.m in Sources */,
 				9ACCF43B17CCF48C00F56F10 /* AddCell.m in Sources */,
